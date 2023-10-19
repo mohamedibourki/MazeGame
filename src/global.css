@@ -1,0 +1,61 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    background-image: linear-gradient(to bottom, rgb(0, 166, 255), rgb(0, 102, 255));
+    height: 100vh;
+}
+
+.btn1 {
+    font-weight: 700;
+    padding-inline: 20px;
+    padding-block: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border-style: none;
+    font-size:larger;
+    background-color: aliceblue;
+}
+
+.btn1:hover {
+    background-color: orange;
+    transition: 500ms;
+}
+
+.gqme {
+    width: 70px;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+}
+
+.flex {
+    margin-right: 300px;
+}
+
+.point {
+    width: 20px;
+    height: 20px;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+.goal {
+    width: 20px;
+    height: 20px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.border {
+    border: 7px solid black;
+    width: 50%;
+    transform: translateX(50%);
+    margin-block: 50px;
+    height: 70vh;
+    display: flex;
+}
