@@ -37,39 +37,91 @@ body {
     margin-right: 300px;
 }
 
-.point {
-    width: 20px;
-    height: 20px;
-    background-color: aliceblue;
-    border-radius: 50%;
-}
-
-.goal {
-    width: 20px;
-    height: 20px;
-    background-color: aliceblue;
-    border-radius: 50%;
-    margin-right: 30px;
-}
-
 .border {
     border: 7px solid black;
     width: 50%;
     margin: auto;
     margin-block: 50px;
     height: 70vh;
+    position: relative;
 }
 
 .dragos {
     height: 100%;
 }
 
-#drag-1,
-#drag-2 {
+#drag-1 {
     background-color: rgb(0, 0, 0);
     color: white;
     font-weight: 700;
-    padding: 10px;
+    padding-inline: 20px;
+    padding-block: 20px;
     border-radius: 50%;
     width: fit-content;
+}
+
+.posi {
+    position: absolute;
+    width: 2%;
+    height: 70%;
+    left: 90px;
+    top: 0;
+    background-color: black;
+}
+
+.posi1 {
+    position: absolute;
+    width: 2%;
+    height: 70%;
+    left: 190px;
+    top: 130px;
+    background-color: black;
+}
+
+.posi2 {
+    position: absolute;
+    width: 2%;
+    height: 70%;
+    left: 300px;
+    top: 0px;
+    background-color: black;
+}
+
+.posi3 {
+    position: absolute;
+    width: 2%;
+    height: 70%;
+    left: 420px;
+    top: 130px;
+    background-color: black;
+}
+
+.posi4 {
+    position: absolute;
+    width: 2%;
+    height: 70%;
+    left: 530px;
+    top: 0px;
+    background-color: black;
+}
+
+.posi4::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: white;
+    margin-left: 40px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.goal {
+    background-color: rgb(255, 255, 255);
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 50%;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
 }
