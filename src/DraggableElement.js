@@ -31,11 +31,6 @@ function DraggableElements() {
     return (
         <div className='dragos'>
             <div id="drag-1" className="draggable"></div>
-            <div className='posi'></div>
-            <div className='posi1'></div>
-            <div className='posi2'></div>
-            <div className='posi3'></div>
-            <div className='posi4'></div>
         </div>
     );
 }

@@ -4,7 +4,7 @@ body {
 }
 
 .App {
-    background-image: linear-gradient(to bottom, rgb(0, 166, 255), rgb(0, 102, 255));
+    background-image: linear-gradient(to bottom, rgb(154, 220, 255), rgb(16, 73, 159));
     height: 100vh;
 }
 
@@ -39,11 +39,10 @@ body {
 
 .border {
     border: 7px solid black;
-    width: 50%;
+    width: 50vw;
     margin: auto;
     margin-block: 50px;
     height: 70vh;
-    position: relative;
 }
 
 .dragos {
@@ -52,68 +51,9 @@ body {
 
 #drag-1 {
     background-color: rgb(0, 0, 0);
-    color: white;
-    font-weight: 700;
-    padding-inline: 20px;
-    padding-block: 20px;
+    padding: 20px;
     border-radius: 50%;
     width: fit-content;
-}
-
-.posi {
-    position: absolute;
-    width: 2%;
-    height: 70%;
-    left: 90px;
-    top: 0;
-    background-color: black;
-}
-
-.posi1 {
-    position: absolute;
-    width: 2%;
-    height: 70%;
-    left: 190px;
-    top: 130px;
-    background-color: black;
-}
-
-.posi2 {
-    position: absolute;
-    width: 2%;
-    height: 70%;
-    left: 300px;
-    top: 0px;
-    background-color: black;
-}
-
-.posi3 {
-    position: absolute;
-    width: 2%;
-    height: 70%;
-    left: 420px;
-    top: 130px;
-    background-color: black;
-}
-
-.posi4 {
-    position: absolute;
-    width: 2%;
-    height: 70%;
-    left: 530px;
-    top: 0px;
-    background-color: black;
-}
-
-.posi4::before {
-    content: '';
-    width: 40px;
-    height: 40px;
-    display: block;
-    background: white;
-    margin-left: 40px;
-    margin-top: 20px;
-    border-radius: 50%;
 }
 
 .goal {
@@ -124,4 +64,8 @@ body {
     width: fit-content;
     display: flex;
     justify-content: flex-end;
+}
+
+#myCanvas {
+    border: 1px solid black;
 }
