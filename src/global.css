@@ -24,49 +24,84 @@ body {
     transition: 500ms;
 }
 
+.gqme {
+    width: 70px;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+}
+
+.flex {
+    margin-right: 300px;
+}
+
 .border {
     border: 7px solid black;
-    width: 50%;
+    width: 50vw;
     margin: auto;
     margin-block: 50px;
     height: 70vh;
+}
+
+.dragos {
+    height: 100%;
     display: flex;
 }
 
-.border::before {
-    content: "";
-    display: block;
-    width: 3%;
-    height: 75%;
-    background-color: black;
-    position: relative;
-    left: 112.5px;
-}
-
-.border::after {
-    content: "";
-    display: block;
-    width: 3%;
-    height: 75%;
-    background-color: black;
-    position: relative;
-    left: 420px;
-    top: 100px;
-}
-
-.ball {
+#drag-1 {
+    background-color: rgb(0, 0, 0);
     padding: 20px;
-    background-color: black;
     border-radius: 50%;
+    width: fit-content;
+    height: fit-content;
+}
+#drag-2 {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 50%;
+    width: fit-content;
     height: fit-content;
 }
 
 .goal {
-    padding: 20px;
     background-color: rgb(255, 255, 255);
+    font-weight: 700;
+    padding: 20px;
     border-radius: 50%;
-    height: fit-content;
-    position: relative;
-    left: 81%;
-    top: 80%;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#myCanvas {
+    border: 1px solid black;
+}
+
+.wall {
+    width: 2%;
+    height: 80%;
+    background-color: black;
+    margin-left: 80px;
+}
+.wall1 {
+    width: 2%;
+    height: 80%;
+    background-color: black;
+    margin-left: 120px;
+    margin-top: 80px;
+}
+.wall2 {
+    width: 2%;
+    height: 80%;
+    background-color: black;
+    margin-left: 120px;
+}
+.wall3 {
+    width: 2%;
+    height: 80%;
+    background-color: black;
+    margin-left: 120px;
+    margin-top: 80px;
 }

@@ -1,5 +1,5 @@
+import DraggableElement from "./DraggableElements";
 import Countdown from "react-countdown";
-import React from 'react';
 
 function Game() {
     const Completionist = () => <span>Time Over</span>;
@@ -15,20 +15,6 @@ function Game() {
             );
         }
     };
-
-    function allowDrop(ev) {
-        ev.preventDefault()
-    }
-
-    function drag(ev) {
-        ev.dataTransfer.setData("text", ev.target.id)
-    }
-
-    function drop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-    }
     return (
         <>
             <header style={{ display: "flex", justifyContent: "space-around" }}>
@@ -39,8 +25,7 @@ function Game() {
                 <h1>Level : 1</h1>
             </header>
             <div className="border">
-                <div className="ball" id="drag1" draggable="true" onDragStart={drag}></div>
-                <div className="goal" onDragOver={allowDrop} onDrop={drop}></div>
+                <DraggableElement />
             </div>
         </>
     )
