@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import interact from 'interactjs';
+import { useNavigate } from 'react-router-dom';
 
 function DraggableElements() {
+    const navigate = useNavigate();
+
     useEffect(() => {
         interact('.drag-drop').draggable({
             inertia: true,
@@ -23,16 +26,18 @@ function DraggableElements() {
                 var dropzoneElement = event.target;
                 dropzoneElement.classList.add('drop-target');
                 draggableElement.classList.add('can-drop');
-                draggableElement.textContent = 'Dragged in';
             },
             ondragleave: function (event) {
                 event.target.classList.remove('drop-target');
                 event.relatedTarget.classList.remove('can-drop');
-                event.relatedTarget.textContent = 'Dragged out';
             },
             ondrop: function (event) {
-                event.relatedTarget.textContent = 'Dropped';
-            },
+                // Check if the dropped element is the black ball
+                if (event.relatedTarget.id === 'drag-1') {
+                    // Navigate to GameLevel2
+                    navigate('/GameLevel2');
+                }
+            },                       
         });
     }, []);
 
@@ -78,7 +83,6 @@ function DraggableElements() {
             <div className='wall2'></div>
             <div className='wall3'></div>
             <div id="drag-2" className="drag-drop dropzone">
-                Drop the black ball here
             </div>
         </div>
     );
