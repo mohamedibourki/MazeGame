@@ -1,5 +1,5 @@
 import Countdown from "react-countdown";
-import DraggableElements2 from "./DraggableElements2";
+import DraggableElements3 from "./DraggableElements3";
 
 function Game2() {
   const Completionist = () => <span>Time Over</span>;
@@ -10,7 +10,7 @@ function Game2() {
     } else {
       return (
         <span>
-          {`${minutes}`}:{`${seconds}`}
+          {`0${minutes}`}:{`0${seconds}`}
         </span>
       );
     }
@@ -19,13 +19,13 @@ function Game2() {
     <>
       <header style={{ display: "flex", justifyContent: "space-around" }}>
         <h1>
-          <Countdown date={Date.now() + 20000} renderer={renderer} />
+          <Countdown date={Date.now() + 9000} renderer={renderer} />
         </h1>
 
-        <h1>Level : 2</h1>
+        <h1>Level : 3</h1>
       </header>
       <div className="border">
-        <DraggableElements2 />
+        <DraggableElements3 />
       </div>
     </>
   )

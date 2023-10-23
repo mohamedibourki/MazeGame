@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import interact from 'interactjs';
 import { useNavigate } from 'react-router-dom';
 
-function DraggableElements() {
+function DraggableElements2() {
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -35,9 +35,9 @@ function DraggableElements() {
                 // Check if the dropped element is the black ball
                 if (event.relatedTarget.id === 'drag-1') {
                     // Navigate to GameLevel2
-                    navigate('/GameLevel2');
+                    navigate('/GameLevel3');
                 }
-            },
+            },                       
         });
     }, []);
 
@@ -47,7 +47,7 @@ function DraggableElements() {
         const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
         // Check for collisions with walls
-        const walls = document.querySelectorAll('.wall, .wall1, .wall2, .wall3');
+        const walls = document.querySelectorAll('.wallLevel2, .wallLevel21, .wallLevel22, .wallLevel23, .wallLevel24');
         const ballRect = target.getBoundingClientRect();
 
         let isColliding = false;
@@ -76,15 +76,16 @@ function DraggableElements() {
     }
 
     return (
-        <div className='dragos'>
+        <div className='dragos2'>
             <div id="drag-1" className="drag-drop"></div>
-            <div className='wall'></div>
-            <div className='wall1'></div>
-            <div className='wall2'></div>
-            <div className='wall3'></div>
+            <div className='wallLevel2'></div>
+            <div className='wallLevel21'></div>
+            <div className='wallLevel22'></div>
+            <div className='wallLevel23'></div>
+            <div className='wallLevel24'></div>
             <div id="drag-2" className="drag-drop dropzone"></div>
         </div>
     );
 }
 
-export default DraggableElements;
+export default DraggableElements2;

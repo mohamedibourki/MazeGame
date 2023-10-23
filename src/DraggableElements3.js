@@ -35,9 +35,9 @@ function DraggableElements() {
                 // Check if the dropped element is the black ball
                 if (event.relatedTarget.id === 'drag-1') {
                     // Navigate to GameLevel2
-                    navigate('/GameLevel2');
+                    navigate('/GameLevel3');
                 }
-            },
+            },                       
         });
     }, []);
 
@@ -78,11 +78,12 @@ function DraggableElements() {
     return (
         <div className='dragos'>
             <div id="drag-1" className="drag-drop"></div>
-            <div className='wall'></div>
+            {/* <div className='wall'></div>
             <div className='wall1'></div>
             <div className='wall2'></div>
-            <div className='wall3'></div>
-            <div id="drag-2" className="drag-drop dropzone"></div>
+            <div className='wall3'></div> */}
+            <div id="drag-2" className="drag-drop dropzone">
+            </div>
         </div>
     );
 }
